@@ -1,0 +1,665 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Russo One', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  background-color: #ffffff;
+  height: 100%;
+}
+
+main .secondary-sec{
+  height: 375px;
+}
+ 
+
+.header{
+ height: 90vh;
+ max-width: 100%;
+  background-image:linear-gradient(to right bottom,
+   #050000bb,#0500000c),
+    url('../Images/my-photo.jpg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  background-attachment: fixed;
+  /*clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% ); */
+
+}
+.logo-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  margin-top: 50px;
+  height: 50px;
+  width: 100%;
+/*justify-content: space-around;*/
+}
+
+
+.menu{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  width: 100%;
+  float:right;
+  
+}
+
+.menu ul,li,a{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 5px;
+
+}
+.menu a:hover{
+  color: #E78655;
+  
+  }
+
+.logo{
+  height: 120px;
+  margin-left: 0;
+  border-radius: 80px;
+
+}
+
+.content{
+  text-align: center;
+  /*
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 150px;*/
+ 
+}
+.heading-primary{
+  display: block;
+  position: relative;
+  color: #fff;
+  backface-visibility: hidden;
+  font-family: 'Russo One', sans-serif;
+  padding: 160px 80px ;
+  
+}
+.heading-primary-main{
+display: block;
+/*font-size: 20px;
+font-weight: 200;*/
+animation-name: moveInLeft;
+   animation-duration: 3s;
+   animation-timing-function: ease-out;
+
+}
+
+.heading-primary-secondary{
+  display: block;
+  /*font-weight: 400;*/
+  animation: moveInRight 5s ease-out;
+  margin-bottom: 30px;
+}
+
+/*animated button*/
+
+@keyframes moveInLeft{
+    0%{
+opacity: 0;
+transform: translateX(-100px) rotate(-50deg);
+    }
+
+    60%{
+  transform: rotate(120deg)
+
+    }
+
+    80%{
+transform: translateX(10px);
+    }
+
+    100%{
+opacity: 1;
+transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+opacity: 0;
+transform: translateX(100px);
+    }
+
+    80%{
+transform: translateX(-10px);
+    }
+
+    100%{
+opacity: 1;
+transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom{
+    0%{
+opacity: 0;
+transform: translateY(30px);
+    }
+
+
+    100%{
+opacity: 1;
+transform: translate(0);
+    }
+}
+
+/*Animated Button
+.my-btn:link,
+.my-btn:visited {
+text-transform: uppercase;
+text-decoration: none;
+padding: 15px 40px;
+display: inline-block;
+border-radius: 50px;
+transition: all .2s;
+position: relative;
+}
+*/
+.button:link,
+.button:visited{
+  background-color: #E78655;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: all .2s;
+  position: relative;
+}
+
+.button:hover{
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0,0,0,.2);
+color:#fff;
+}
+
+.button:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+}
+
+.my-btn{
+  background-color: #777;
+  color: #fff;
+  font-size: 16px;
+}
+
+.button::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+  /*
+  background-color: #fff;
+  z-index: -1;
+  transition: .7s;*/
+}
+
+.my-btn::after{
+  background-color: #E78655;
+
+
+  /*
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity:0;
+*/
+}
+.button:hover::after{
+transform: scaleX(1.4) scaleY(1.6);
+opacity: 0;
+}
+.btn-animated{
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+.first-sec{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*height: 40vh;*/
+  padding: 35px;
+  font-size: 20px;
+  background-color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.first-sec .Me{
+color: #E78655;
+}
+.Something{
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.secondary-sec{
+font-weight: 800;
+}
+.sec-title{
+text-align: center;
+text-transform: uppercase;
+font-weight: bold;
+color: #E78655;
+height: 100px;
+padding: 15px 15px;
+font-family: sans-serif;
+
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flipcard-container{
+display: flex;
+justify-content: space-between;
+
+
+}
+
+.flip-card {
+  display: inline-flex;
+  justify-content: space-evenly;
+  background-color: transparent;
+  width: 317px;
+  height: 270px;
+  font-size: 13px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+ background: linear-gradient(to right ,rgba(39, 38, 37, 0.486),
+  rgba(39, 38, 37, 0.486)),
+  url('/Images/gradient.jpg');;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+}
+
+.flip-card-front img{
+  margin-top: 25px;
+
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #000;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+@media only screen and (max-width:760px){
+flipcard-container{
+  max-width: 100%;
+  height: 100%;
+ 
+}
+
+
+}
+/*.courses{
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+≈.courses strong{
+text-transform: uppercase;
+font-family: sans-serif;
+}
+
+
+.courses, img{
+  text-align: center;
+}
+
+.html{
+margin-right: 20px;
+margin-left: 50px;
+}
+
+.css{
+margin-right: 20px;
+
+}
+
+ .javascript{
+  margin-right: 20px;
+
+  }
+
+ .wordpress{
+    margin-right: 50px;
+    margin-left: 20px;
+
+  }
+*/
+
+.container{
+display: flex;
+justify-content: space-between;
+/*background: linear-gradient(to right ,rgba(2, 2, 2, 0.486),
+rgba(20, 20, 19, 0.486)),
+url('/Images/gradient.jpg');
+background-size: cover;*/
+color: #fff;
+padding: 28px 30px;
+/*transform: translate(-50% -50%);*/
+margin-top: 50px;
+background: url('/Images/gradient.jpg');
+background-size: cover;
+background-attachment: fixed;
+}
+
+.container .box{
+width: 100%;
+}
+
+
+.container .box h2{
+text-align: center;
+text-transform: uppercase;
+
+}
+
+
+.container .box .chart{
+position: relative;
+width:110px;
+height:160px;
+margin: 0 auto;
+text-align: center;
+font-size: 30px;
+line-height: 120px;
+
+}
+
+
+
+.container .box canvas{
+position: absolute;
+top: 0;
+left: -10px;
+height: 120px;
+width: 120px;
+
+}
+@media screen and (max-width:800px){
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+
+}
+
+.last-section {
+
+display: flex;
+justify-content: space-evenly;
+height: 30vh;
+position: relative;
+}
+
+.last-section, .web{
+margin-left: 50px;
+margin-right: 25px;
+
+}
+
+.last-section, .aws{
+margin-left: 25px;
+margin-right: 50px;
+}
+
+.part-2{
+display: flex;
+justify-content: space-evenly;
+height: 20vh;
+margin-top: 20px;
+}
+
+.part-2, .graphic{
+margin-left: 50px;
+margin-right: 25px;
+}
+
+.part-2, .automation{
+margin-left: 25px;
+margin-right: 50px;
+}
+
+
+ .ending{
+text-align: center;
+text-transform: uppercase;
+text-shadow: 1px 1px #ffffff;
+padding: 40px 20px;
+font-family: sans-serif;
+
+}
+
+.of{
+color: #E78655;
+font-family: sans-serif;
+
+}
+
+.services-r1, .services-r2{
+display: flex;
+justify-content: space-around;
+padding: 20px;
+margin-left: 10px;
+}
+
+
+.services-r1, .services-r2 h4{
+font-family: sans-serif;
+}
+
+.uvx, .branding, .creative,.innovative, .marketing, .digital {
+  background-color: #A2A7A5;
+  border: 1px solid #ffff;
+  margin-right: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+
+
+
+@media only screen and  (min-width: 640px) and (max-width: 1240px) {
+  body,html {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body,html {
+
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    width: 180%;
+  }
+  
+
+  
+
+
+}
+
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=number] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+
+input[type=submit] {
+  background-color: #E78655;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.contact-container {
+  border-radius: 5px;
+  background: linear-gradient(to right ,rgba(39, 38, 37, 0.486),
+  rgba(39, 38, 37, 0.486)),
+  url('/Images/gradient.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 10px;
+
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.column label{
+  color: white;
+  font-weight: bold;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  h3 {
+    color: red;
+  }
+}
+
+
+.heading-tertiary{
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.932);
+  font-weight: 700;
+  text-shadow: 2px 2px #ffffff;
+}
+.paragraph-tertiary{
+font-size: 24px;
+font-weight: bold;
+color: #E78655;
+text-transform: uppercase;
+}
+
+#my-foet{
+  background-color: transparent;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #efefef;
+}
+
+#my-foet p{
+margin-top: 20px;
+
+}
+
+.tel-no, .whatsapp-me, .email-me, .copyrights{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-me p{
+  text-transform: uppercase;
+  font-weight: bolder; 
+}
