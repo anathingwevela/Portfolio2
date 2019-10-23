@@ -25,7 +25,7 @@ main .secondary-sec{
  max-width: 100%;
   background-image:linear-gradient(to right bottom,
    #050000bb,#0500000c),
-    url('../Images/my-photo.jpg');
+    url('my-photo.jpg');
   background-size: cover;
   background-position: top;
   position: relative;
